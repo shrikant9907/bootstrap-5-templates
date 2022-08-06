@@ -184,6 +184,7 @@ $primaryColor: #117CA6;
           border-top-left-radius: 0;
           position: relative;
           top: 25px;
+          max-width: 70%;
         }
 
         &.in {
@@ -200,7 +201,6 @@ $primaryColor: #117CA6;
             border-top-right-radius: 0;
             background-color: $primaryColor;
             color: #fff;
-            max-width: 50%;
           }
         }
        }
