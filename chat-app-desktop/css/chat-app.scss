@@ -1,0 +1,245 @@
+body {
+  background-color: rgb(246, 246, 246);
+}
+
+$primaryColor: #117CA6;
+
+.cmca-user-details {
+  position: relative;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .cmca-avatar {
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    margin-right: 15px;
+    background-color: #fff;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .cmca-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: $primaryColor  !important;
+    line-height: 1;
+  }
+
+  .cmca-status {
+    font-size: 14px;
+  }
+
+  .cmca-edit-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    cursor: pointer;
+
+    &:hover {
+      color: $primaryColor;
+      border: 1px solid #ddd;
+      background: #fff;
+    }
+  }
+}
+
+.cm-chat-app {
+  padding-left: 350px;
+
+  .text-primary {
+    color: $primaryColor  !important;
+  }
+
+  .cmca-left {
+    width: 350px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100vh;
+    padding: 20px;
+
+    .cmca-search-contacts {
+      margin-bottom: 25px;
+
+      .cmca-search-input {
+        position: relative;
+
+        .cmca-search-icon {
+          position: absolute;
+          left: 18px;
+          top: calc(50% - 10px);
+          font-size: 14px;
+          color: #6c757d;
+        }
+
+        .cmca-input {
+          border: unset;
+          min-height: 35px;
+          padding-left: 40px;
+          line-height: 1;
+          font-size: 14px;
+          border-radius: 25px;
+          width: 100%;
+        }
+      }
+    }
+
+    .cmca-contact-list {
+      overflow-x: auto;
+      height: calc(100vh - 160px);
+
+      .cmca-user-details {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        margin: 0px;
+        cursor: pointer;
+
+        .cmca-avatar {
+          width: 50px;
+          height: 50px;
+        }
+
+        .cmca-name {
+          font-weight: normal;
+        }
+
+        .cmca-time,
+        .cmca-message {
+          font-size: 14px;
+          color: #6c757d;
+        }
+
+        .cmca-time {
+          position: absolute;
+          top: 15px;
+          right: 0px;
+          font-size: 10px;
+          text-transform: uppercase;
+        }
+
+        &:hover {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+  .cmca-right {
+    background-color: #fff;
+    height: 100vh;
+    padding: 25px;
+    position: relative;
+
+    .cmca-chat-header {
+      border-bottom: 1px solid #eee;
+
+      .cmca-user-details {
+        .cmca-avatar {
+          border-radius: 100%;
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+    
+    .cmca-chat-body {
+      padding: 15px;
+
+      .cmca-chat-msg {
+        display: flex;
+        margin-bottom: 10px;
+     
+        .cmca-avatar {
+          width: 30px;
+          height: 30px;
+          border-radius: 100%;
+          overflow: hidden;
+          margin-right: 10px;
+          img {
+            width: 100%;
+          }
+        }
+
+        .cmca-message {
+          background-color: #eee;
+          border-radius: 10px;
+          font-size: 14px;
+          padding: 10px 15px;
+          border-top-left-radius: 0;
+          position: relative;
+          top: 25px;
+        }
+
+        &.in {
+          justify-content: flex-start;
+          flex-direction: row-reverse;
+
+          .cmca-avatar {
+            margin-right: 0;
+            margin-left: 10px;
+          }
+
+          .cmca-message {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 0;
+            background-color: $primaryColor;
+            color: #fff;
+            max-width: 50%;
+          }
+        }
+       }
+    }
+
+    .cmca-chat-footer {
+      .cmca-write-message {
+        padding: 20px 30px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        border-top: 1px solid #eee;
+
+        input {
+          border: 1px solid #eee !important;
+          padding: 10px;
+          height: 45px;
+          border-radius: 8px;
+          width: 100%;
+          background: #efefef;
+          outline: unset !important;
+        }
+
+        .button {
+          position: absolute;
+          right: 38px;
+          border: unset;
+          top: 21px;
+          font-size: 26px;
+          color: #666;
+          cursor: pointer;
+          &:hover {
+            color: $primaryColor;
+          }
+        }
+      }
+    }
+
+
+  }
+}

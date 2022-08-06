@@ -1,0 +1,205 @@
+body {
+  background-color: rgb(246, 246, 246);
+}
+
+.cmca-user-details {
+  position: relative;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.cmca-user-details .cmca-avatar {
+  border-radius: 100%;
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  margin-right: 15px;
+  background-color: #fff;
+}
+.cmca-user-details .cmca-avatar img {
+  max-width: 100%;
+}
+.cmca-user-details .cmca-name {
+  font-weight: bold;
+  font-size: 16px;
+  color: #117CA6 !important;
+  line-height: 1;
+}
+.cmca-user-details .cmca-status {
+  font-size: 14px;
+}
+.cmca-user-details .cmca-edit-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.cmca-user-details .cmca-edit-icon:hover {
+  color: #117CA6;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+.cm-chat-app {
+  padding-left: 350px;
+}
+.cm-chat-app .text-primary {
+  color: #117CA6 !important;
+}
+.cm-chat-app .cmca-left {
+  width: 350px;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100vh;
+  padding: 20px;
+}
+.cm-chat-app .cmca-left .cmca-search-contacts {
+  margin-bottom: 25px;
+}
+.cm-chat-app .cmca-left .cmca-search-contacts .cmca-search-input {
+  position: relative;
+}
+.cm-chat-app .cmca-left .cmca-search-contacts .cmca-search-input .cmca-search-icon {
+  position: absolute;
+  left: 18px;
+  top: calc(50% - 10px);
+  font-size: 14px;
+  color: #6c757d;
+}
+.cm-chat-app .cmca-left .cmca-search-contacts .cmca-search-input .cmca-input {
+  border: unset;
+  min-height: 35px;
+  padding-left: 40px;
+  line-height: 1;
+  font-size: 14px;
+  border-radius: 25px;
+  width: 100%;
+}
+.cm-chat-app .cmca-left .cmca-contact-list {
+  overflow-x: auto;
+  height: calc(100vh - 160px);
+}
+.cm-chat-app .cmca-left .cmca-contact-list .cmca-user-details {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  margin: 0px;
+  cursor: pointer;
+}
+.cm-chat-app .cmca-left .cmca-contact-list .cmca-user-details .cmca-avatar {
+  width: 50px;
+  height: 50px;
+}
+.cm-chat-app .cmca-left .cmca-contact-list .cmca-user-details .cmca-name {
+  font-weight: normal;
+}
+.cm-chat-app .cmca-left .cmca-contact-list .cmca-user-details .cmca-time,
+.cm-chat-app .cmca-left .cmca-contact-list .cmca-user-details .cmca-message {
+  font-size: 14px;
+  color: #6c757d;
+}
+.cm-chat-app .cmca-left .cmca-contact-list .cmca-user-details .cmca-time {
+  position: absolute;
+  top: 15px;
+  right: 0px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.cm-chat-app .cmca-left .cmca-contact-list .cmca-user-details:hover {
+  background-color: #fff;
+}
+.cm-chat-app .cmca-right {
+  background-color: #fff;
+  height: 100vh;
+  padding: 25px;
+  position: relative;
+}
+.cm-chat-app .cmca-right .cmca-chat-header {
+  border-bottom: 1px solid #eee;
+}
+.cm-chat-app .cmca-right .cmca-chat-header .cmca-user-details .cmca-avatar {
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+}
+.cm-chat-app .cmca-right .cmca-chat-body {
+  padding: 15px;
+}
+.cm-chat-app .cmca-right .cmca-chat-body .cmca-chat-msg {
+  display: flex;
+  margin-bottom: 10px;
+}
+.cm-chat-app .cmca-right .cmca-chat-body .cmca-chat-msg .cmca-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.cm-chat-app .cmca-right .cmca-chat-body .cmca-chat-msg .cmca-avatar img {
+  width: 100%;
+}
+.cm-chat-app .cmca-right .cmca-chat-body .cmca-chat-msg .cmca-message {
+  background-color: #eee;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 10px 15px;
+  border-top-left-radius: 0;
+  position: relative;
+  top: 25px;
+}
+.cm-chat-app .cmca-right .cmca-chat-body .cmca-chat-msg.in {
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+}
+.cm-chat-app .cmca-right .cmca-chat-body .cmca-chat-msg.in .cmca-avatar {
+  margin-right: 0;
+  margin-left: 10px;
+}
+.cm-chat-app .cmca-right .cmca-chat-body .cmca-chat-msg.in .cmca-message {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 0;
+  background-color: #117CA6;
+  color: #fff;
+  max-width: 50%;
+}
+.cm-chat-app .cmca-right .cmca-chat-footer .cmca-write-message {
+  padding: 20px 30px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  border-top: 1px solid #eee;
+}
+.cm-chat-app .cmca-right .cmca-chat-footer .cmca-write-message input {
+  border: 1px solid #eee !important;
+  padding: 10px;
+  height: 45px;
+  border-radius: 8px;
+  width: 100%;
+  background: #efefef;
+  outline: unset !important;
+}
+.cm-chat-app .cmca-right .cmca-chat-footer .cmca-write-message .button {
+  position: absolute;
+  right: 38px;
+  border: unset;
+  top: 21px;
+  font-size: 26px;
+  color: #666;
+  cursor: pointer;
+}
+.cm-chat-app .cmca-right .cmca-chat-footer .cmca-write-message .button:hover {
+  color: #117CA6;
+}/*# sourceMappingURL=chat-app.css.map */
